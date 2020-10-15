@@ -5,6 +5,7 @@ node {
         stage('Checkout') {
             git url: 'https://github.com/genmart/microservice1.git', credentialsId: 'github', branch: 'master'
         }
+        
         stage('Build') {
             bat 'mvn clean install'
 
